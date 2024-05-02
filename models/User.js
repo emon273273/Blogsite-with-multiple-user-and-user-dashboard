@@ -1,6 +1,8 @@
 //Name,Email,Password and Profile thakbe
 
+
 const { Schema, model } = require("mongoose");
+const Profile=require ('./Profile')
 
 const userSchema = new Schema(
   {
@@ -21,7 +23,7 @@ const userSchema = new Schema(
     },
     profile: {
       type: Schema.Types.ObjectId,
-      ref: "Profile",
+      ref: Profile,
 
       //ekhane kokhonoi required korbo na
     },
